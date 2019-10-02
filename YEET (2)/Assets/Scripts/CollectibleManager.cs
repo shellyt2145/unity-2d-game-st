@@ -34,6 +34,10 @@ public class CollectibleManager : MonoBehaviour
     {
         _collectedDankWeed++;
         DisplayDankWeedCount();
+        if(_collectedDankWeed == _totalDankWeed)
+        {
+            YouWinMenu.Instance.Show();
+        }
     }
   
   
