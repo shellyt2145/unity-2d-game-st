@@ -9,24 +9,27 @@ public class YouWinMenu : MonoBehaviour
     public static YouWinMenu Instance;
     public GameObject container;
     public Button nextLevelButton;
+    public Button dismissButton;
 
     private void OnEnable()
     {
         nextLevelButton.onClick.AddListener(HandleNextLevelPressed);
+        dismissButton.onClick.AddListener(Hide);
     }
 
     private void OnDisable()
     {
         nextLevelButton.onClick.RemoveListener(HandleNextLevelPressed);
+        dismissButton.onClick.RemoveListener(Hide);
     }
 
-    private void HandleNextLevelPressed()
+    void HandleNextLevelPressed()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
     }
 
-
+    
 
     private void Awake()
     {
@@ -38,4 +41,8 @@ public class YouWinMenu : MonoBehaviour
         container.SetActive(true);
     }
 
+    public void Hide()
+    {
+        container.SetActive(false);
+    }
 }
