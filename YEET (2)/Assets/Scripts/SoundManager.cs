@@ -10,6 +10,9 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip coinCollectSound;
 
+    public AudioClip hazardHitSound;
+
+
     private void Awake()
     {
         if(Instance == null)
@@ -29,5 +32,9 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
     }
 
-
+    public void PlayhazardHitSound()
+    {
+        audioSource.clip = hazardHitSound;
+        audioSource.Play();
+    }
 }

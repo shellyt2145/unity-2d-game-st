@@ -11,6 +11,8 @@ public class Hazard : MonoBehaviour
         if(collision.gameObject.GetComponent<PlatformerCharacter2D>())
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SoundManager.Instance.PlayhazardHitSound();
         }
+
     }
 }
