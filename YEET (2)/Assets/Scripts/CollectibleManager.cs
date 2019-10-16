@@ -30,16 +30,21 @@ public class CollectibleManager : MonoBehaviour
         DankWeedCount.SetText(_totalDankWeed + " / " + _collectedDankWeed);
     }
 
-    public void handledankweedcollected()
+    public void Handledankweedcollected()
     {
         _collectedDankWeed++;
         DisplayDankWeedCount();
         if(_collectedDankWeed == _totalDankWeed)
         {
             YouWinMenu.Instance.Show();
+            SoundManager.Instance.PlayyouWinSound();
         }
 
-        SoundManager.Instance.PlayCoinCollectSound();
+        else
+        {
+            SoundManager.Instance.PlayCoinCollectSound();
+        }
+        
 
     }
   

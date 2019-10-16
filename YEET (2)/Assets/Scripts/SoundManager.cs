@@ -10,6 +10,13 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip coinCollectSound;
 
+<<<<<<< Updated upstream
+=======
+    public AudioClip hazardHitSound;
+    public AudioClip youWinSound;
+
+
+>>>>>>> Stashed changes
     private void Awake()
     {
         if(Instance == null)
@@ -29,5 +36,19 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
     }
 
+<<<<<<< Updated upstream
 
+=======
+    public void PlayhazardHitSound()
+    {
+        audioSource.clip = hazardHitSound;
+        audioSource.Play();
+    }
+
+    public void PlayyouWinSound()
+    {
+        audioSource.clip = youWinSound;
+        audioSource.Play();
+    }
+>>>>>>> Stashed changes
 }

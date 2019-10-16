@@ -19,7 +19,7 @@ public class Collectible : MonoBehaviour
     }
     void handlecollected()
     {
-        CollectibleManager.Instance.handledankweedcollected();
+        CollectibleManager.Instance.Handledankweedcollected();
 
         _hasBeenCollected = true;
         print("420 Blaze it");
