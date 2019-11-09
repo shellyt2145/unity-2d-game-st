@@ -17,7 +17,7 @@ public class Collectible : MonoBehaviour
         }
 
     }
-    void handlecollected()
+    public virtual void handlecollected()
     {
         CollectibleManager.Instance.handledankweedcollected();
 
